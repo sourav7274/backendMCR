@@ -5,12 +5,10 @@ const cors = require('cors');
 
 const app = express();
 const corsOptions = {
-    origin: "https://mc-r-frontend.vercel.app", // Allow only your frontend
-    methods: "GET,POST,DELETE", // Allow only necessary methods
-    allowedHeaders: "Content-Type,Authorization", // Allow necessary headers
-    credentials: true, // Allow credentials if needed
+    origin: "*",
+    credentials: true,
+    optionSuccessStatus: 200
 };
-
 app.use(cors(corsOptions));
 app.use(express.json());
 
